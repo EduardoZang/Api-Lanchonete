@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/LanchoneteApi.props" />
+</Project>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LanchoneteApi</name>
+    </assembly>
+    <members>
+        <member name="M:LanchoneteApi.Controllers.ComandaController.AddComanda(LanchoneteApi.Dtos.CreateComandaDto)">
+            <summary>
+            Adiciona uma comanda ao banco de dados
+            </summary>
+            <param name="addComandaDto">Objeto com os campos necessários para o cadastro de uma comada</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ComandaController.VisualizaComanda(System.Int32,System.Int32)">
+            <summary>
+            Exibe todas as comandas do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a exibição seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ComandaController.VisualizaComandaId(System.Int32)">
+            <summary>
+            Exibe uma comanda específica através do ID
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exibição de uma comada</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ComandaController.AtualizaComanda(System.Int32,LanchoneteApi.Dtos.UpdateComandaDto)">
+            <summary>
+            Altera dados de uma comanda específica
+            </summary>
+            <param name="addComandaDto">Objeto com os campos necessários para a alteração de uma comada</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ComandaController.DeletaComanda(System.Int32)">
+            <summary>
+            Exclui uma comanda específica
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exclusão de uma comada</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a exclusão seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.GarcomController.AddGarcom(LanchoneteApi.Dtos.CreateGarcomDto)">
+            <summary>
+            Adiciona um graçom ao banco de dados
+            </summary>
+            <param name="addGarcomDto">Objeto com os campos necessários para o cadastro de um garçom</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.GarcomController.VisualizaGarcom(System.Int32,System.Int32)">
+            <summary>
+            Exibe todos os garçons do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a exibição seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.GarcomController.VisualizaGarcomId(System.Int32)">
+            <summary>
+            Exibe um garçom esecífico através do ID
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exibição de um garçom</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.GarcomController.AtualizaGarcom(System.Int32,LanchoneteApi.Dtos.UpdateGarcomDto)">
+            <summary>
+            Altera dados de um garçom específico
+            </summary>
+            <param name="upGarcomDto">Objeto com os campos necessários para a alteração de um garçom</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.GarcomController.DeletaGarcom(System.Int32)">
+            <summary>
+            Exclui um garçom específico
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exclusão de um garçom</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a exclusão seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ItemComandaController.AddItem(LanchoneteApi.Dtos.CreateItemComandaDto)">
+            <summary>
+            Adiciona um item para o cardápio no banco de dados
+            </summary>
+            <param name="addItemDto">Objeto com os campos necessários para o cadastro de um novo item</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ItemComandaController.VisualizaItem(System.Int32,System.Int32)">
+            <summary>
+            Exibe todos os itens do cardápio salvos no banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a exibição seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ItemComandaController.VisualizaItemId(System.Int32)">
+            <summary>
+            Exibe um item específico através do ID
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exibição de um item</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ItemComandaController.AtualizaItem(System.Int32,LanchoneteApi.Dtos.UpdateItemComandaDto)">
+            <summary>
+            Altera dados de um item específico
+            </summary>
+            <param name="upItemDto">Objeto com os campos necessários para a alteração de um item</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ItemComandaController.DeletaItem(System.Int32)">
+            <summary>
+            Exclui um item do cardápio
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exclusão de um item</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a exclusão seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ProdutoController.AddProduto(LanchoneteApi.Dtos.CreateProdutoDto)">
+            <summary>
+            Adiciona um produto ao banco de dados
+            </summary>
+            <param name="addProdutoDto">Objeto com os campos necessários para o cadastro de um produto</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ProdutoController.VisualizaProduto(System.Int32,System.Int32)">
+            <summary>
+            Exibe todos os produtos do banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a exibição seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ProdutoController.VisualizaProdutoId(System.Int32)">
+            <summary>
+            Exibe um produto específico através do ID
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exibição de um produto</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ProdutoController.AtualizaProduto(System.Int32,LanchoneteApi.Dtos.UpdateProdutoDto)">
+            <summary>
+            Altera dados de um produto específico
+            </summary>
+            <param name="upProdutoDto">Objeto com os campos necessários para a alteração de um produto</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.ProdutoController.DeletaProduto(System.Int32)">
+            <summary>
+            Exclui um produto específico
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exclusão de um produto</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a exclusão seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.TipoController.AddTipo(LanchoneteApi.Dtos.CreateTipoDto)">
+            <summary>
+            Adiciona um tipo ao banco de dados
+            </summary>
+            <param name="addTipoDto">Objeto com os campos necessários para o cadastro de um tipo</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.TipoController.VisualizaTipo(System.Int32,System.Int32)">
+            <summary>
+            Exibe todos os tipos salvos no banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a exibição seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.TipoController.VisualizaTipoId(System.Int32)">
+            <summary>
+            Exibe um tipo específico através do ID
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exibição de um tipo</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.TipoController.AtualizaTipo(System.Int32,LanchoneteApi.Dtos.UpdateTipoDto)">
+            <summary>
+            Altera dados de uma tipo específico
+            </summary>
+            <param name="upTipoDto">Objeto com os campos necessários para a alteração de uma comada</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:LanchoneteApi.Controllers.TipoController.DeletaTipo(System.Int32)">
+            <summary>
+            Exclui um tipo específico
+            </summary>
+            <param name="id">Objeto com os campos necessários para a exclusão de um tipo</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a exclusão seja feita com sucesso</response>
+        </member>
+    </members>
+</doc>

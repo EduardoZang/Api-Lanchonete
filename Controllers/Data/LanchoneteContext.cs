@@ -12,5 +12,7 @@ namespace LanchoneteApi.Data{
         public DbSet<ItemComanda> ItensComandas { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Tipo> Tipos { get; set; }
+
+        
     }
 }

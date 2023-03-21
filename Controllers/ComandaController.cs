@@ -4,6 +4,7 @@ using LanchoneteApi.Dtos;
 using LanchoneteApi.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace LanchoneteApi.Controllers{
 
@@ -44,8 +45,11 @@ namespace LanchoneteApi.Controllers{
     ///<returns>IActionResult</returns>
     ///<response code="200">Caso a exibição seja feita com sucesso</response>
     [HttpGet]
-        public IEnumerable<ReadComandaDto> VisualizaComanda([FromQuery] int skip = 0,[FromQuery] int take = 50){
-            return  _mapper.Map<List<ReadComandaDto>>(_context.Comandas.Skip(skip).Take(take));
+        public IEnumerable<ReadComandaDto> VisualizaComanda([FromQuery] int skip = 0,[FromQuery] int take = 50){    
+            return  _mapper.Map<List<ReadComandaDto>>(_context.Comandas
+                                                        .Include(comanda => comanda.itens)
+                                                        .Skip(skip)
+                                                        .Take(take));
         } 
 
     ///<summary>
@@ -56,7 +60,9 @@ namespace LanchoneteApi.Controllers{
     ///<response code="200">Caso inserção seja feita com sucesso</response>
     [HttpGet("{id}")]
             public IActionResult VisualizaComandaId(int id){
-               var exibeComanda =  _context.Comandas.FirstOrDefault(exibeComanda => exibeComanda._id == id);
+               var exibeComanda =  _context.Comandas
+                                            .Include(comanda => comanda.itens)
+                                            .FirstOrDefault(exibeComanda => exibeComanda._id == id);
                if(exibeComanda == null) return NotFound();
                var exibeComandaDto = _mapper.Map<ReadComandaDto>(exibeComanda);
                 return Ok(exibeComandaDto);

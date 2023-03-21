@@ -18,5 +18,10 @@ namespace LanchoneteApi.Models{
         [Column("garcom_id")]
         public int garcom_id { get; set; }
         public Garcom garcom { get; set; }
+
+        
+        public virtual List<ItemComanda> itens { get; set;}
+
+        public double valorTotal => itens?.Sum(item => item.VlVenda) ?? 0;
     }
 }
